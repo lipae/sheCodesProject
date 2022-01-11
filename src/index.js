@@ -68,7 +68,8 @@ function enterCity(event) {
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", enterCity);
 
-function fetchLocation() {
+function fetchLocation(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(changeTempLoc);
 }
 
