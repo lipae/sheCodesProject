@@ -5,35 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="src/style.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-       <div class="box">
-      <header>
-        <div class="row">
-          <div class="col">
-        <form action="city" class="searchbar">
-          <label for="city">Current weather in</label>
-          <input id="city-searchfield" class="placeholder" type="text" placeholder="Enter a city" autofocus="on" />
-          <input id="search-button" class="button" type = "submit"
-          value = "Search"/>
-        </form>
-        </div>
-        </div>
-      </header>
+    <div class="container" id="box">
+        <header>
+          <form class="row align-items-center">
+              <div class="col form-label">
+                  <label for="currentWeather">Current weather in </label>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="city-searchfield" placeholder="Enter city" autofocus="on">
+                </div>
+              <div class="col">
+                <button id="search-button" type="submit" class="btn btn-primary">Search</button>
+                <button type="button" id="location-button" class="btn btn-primary">My Location</button>
+              </div>
+          </form>
+        </header>
       <div class="row g-5">
         <div class="col-4 current-weather">
           <img src="images/sun.png" alt="symbol of the current weather" />
-          <p> 25 / 30 °C <br/>
-          1st January 2022</p>
+          <p> 25 / 30 °C </p>
+          <p id="current-date">1st January 2022</p>
         </div>
 
         <div class="col-8">
@@ -96,7 +91,6 @@
         </div>
         </div>
         <p id="source">website created by eva <a href="https://github.com/lipae/sheCodesProject.git">view sourcecode</a></p>
-      </div>
       </div>
     </div>
     <script src="src/index.js"></script>
